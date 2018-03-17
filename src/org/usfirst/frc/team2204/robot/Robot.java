@@ -29,7 +29,6 @@ public class Robot extends TimedRobot {
 	
 	private Timer timer = new Timer();
 
-	
     @Override
     public void robotInit() {
     	try {
@@ -176,7 +175,6 @@ public class Robot extends TimedRobot {
     			mLift.moveLift(0);
     		}
     	
-    		
     	} catch (Throwable t) {
     		throw t;
     	}
@@ -189,14 +187,12 @@ public class Robot extends TimedRobot {
     
     @Override
     public void testPeriodic() {
-    	
     	try {
     		
     		
     	} catch (Throwable t) {
     		throw t;
-    	}
-    	
+    	}	
     }
     
 }
