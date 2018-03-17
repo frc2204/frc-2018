@@ -82,9 +82,9 @@ public class Robot extends TimedRobot {
     	//in our frame and because of that we can't start with the cube so we just put the cube in front 
     	//of the robot on the field and clamp it 0.5 seconds into auto
     	
-    	if (time < 0.5) {
+    	if (time < 0.50) {
     		mDrive.curveDrive(0.6, 0, false);
-    	} else if (time > 0.51 && time < 0.52) {
+    	} else if (time > 0.5 && time < 0.52) {
     		mDrive.curveDrive(0.6, 0, false);
     		mIntake.clampCube();
     	} else if (time > 0.52 && time < 5) {
