@@ -26,14 +26,12 @@ public class Robot extends TimedRobot {
 	private SendableChooser<Command> autoChooser;
 	
 	private UsbCamera c922 = CameraServer.getInstance().startAutomaticCapture();
-	
 	private Timer timer = new Timer();
 
     @Override
     public void robotInit() {
     	try {
     		gameData = DriverStation.getInstance().getGameSpecificMessage();
-    		
     		autoChooser = new SendableChooser<Command>();
     		autoChooser.addDefault("Start on Left and Score Left Switch", new StartOnLeftScoreLeftSwitch());
     		autoChooser.addObject("Start on left score right switch", new StartOnLeftScoreRightSwitch());
@@ -63,8 +61,6 @@ public class Robot extends TimedRobot {
 
     @Override
     public void autonomousInit() { 	
-    	timer.start();
-    	
 //    	if (gameData == "LRL") {
 //    		autoCommand = autoChooser.getSelected();
 //    	} else if (gameData == "RRR") {
@@ -72,7 +68,7 @@ public class Robot extends TimedRobot {
 //    	} else {
 //    		
 //    	}
-    	
+    	timer.start();
     	mLED.setColor(LED.rainbow);
     }
     
